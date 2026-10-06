@@ -1,0 +1,107 @@
+/* Centering the Calculator on the page without modifying the main page background */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header Styling */
+.Header {
+  color: #1e3a8a; /* Deep Navy Blue */
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Main Calculator Container (Base Light Blue) */
+.Calculator {
+  width: 100%;
+  max-width: 360px;
+  background: #e0f2fe; /* Light Ice Blue */
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 15px 30px rgba(186, 230, 253, 0.5), 
+              0 4px 12px rgba(14, 165, 233, 0.15);
+  border: 2px solid #bae6fd;
+}
+
+/* Calculator Screen Display */
+.CalcDisplay {
+  background-color: #f0f9ff; /* Soft Lightest Blue */
+  border: 2px solid #bae6fd;
+  border-radius: 16px;
+  height: 80px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0369a1; /* Deep Sky Blue Text */
+  padding: 12px 20px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  word-break: break-all;
+}
+
+/* Buttons Grid Layout */
+.CalcButtons {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Standard Number Buttons (Medium Light Blue) */
+.CalcButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0c4a6e;
+  background-color: #bae6fd;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  user-select: none;
+}
+
+.CalcButton:hover {
+  background-color: #7dd3fc;
+  transform: translateY(-2px);
+}
+
+.CalcButton:active {
+  transform: translateY(0);
+}
+
+/* Operator Buttons (+, -, X, ÷, =) */
+.CalcButtonOperator {
+  background-color: #38bdf8; /* Bright Cyan/Sky Blue */
+  color: #ffffff;
+}
+
+.CalcButtonOperator:hover {
+  background-color: #0284c7;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+/* Clear Button (CLR) */
+.ClearButton {
+  background-color: #f87171; /* Soft Coral Accent for CLR */
+  color: #ffffff;
+}
+
+.ClearButton:hover {
+  background-color: #ef4444;
+  box-shadow: 0 0 12px rgba(248, 113, 113, 0.4);
+}
